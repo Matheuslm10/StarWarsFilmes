@@ -38,6 +38,10 @@
                 margin-bottom: 20px;
                 margin-top: 50px;
             }
+            
+            table td:first-child{
+                width: 140px;
+            }
         
         </style>
         
@@ -47,45 +51,51 @@
 
 		<header>
             <h1>Star Wars</h1>
-            <h3>Tudo sobre os filmes</h3>
+            <h2>Tudo sobre os filmes</h2>
         </header>        
         
         <div>
-            <h4>Selecione um filme:</h4>
+            <h3>Selecione um filme:</h3>
             <select id="filmes" onchange="mostrar_dados"> 
             </select>
+
+            <table>
+                <tr>
+                    <td><b>Ano de lançamento:</b></td>
+                    <td id="ano_campo"></td> 
+                </tr>
+                <tr>
+                    <td><b>Diretor:</b></td>
+                    <td id="diretor_campo"></td>
+                </tr>
+                <tr>
+                    
+                </tr>
+            </table>
             
-            <p>Ano de lançamento:</p>
-            <p id="ano_campo"></p>
+            <div style="width:300px">
+                <p><b>Sinopse:</b></p>
+                <p id="sinopse_campo"></p>
+            </div>
             
-            <p>Diretor:</p>
-            <p id="diretor_campo"></p>
-            
-            <p>Sinopse:</p>
-            <p id="sinopse_campo"></p>
-            
-            <p>Personagens</p>
+            <p><b>Personagens:</b></p>
             <ul class="com_scroll" id="personagens_lista">
             </ul>
             
-            <p>Planetas</p>
+            <p><b>Planetas:</b></p>
             <ul class="com_scroll" id="planetas_lista">
             </ul>
             
-            <p>Espécies</p>
+            <p><b>Espécies:</b></p>
             <ul class="com_scroll" id="especies_lista">
             </ul>
             
-            <p>Naves</p>
+            <p><b>Naves:</b></p>
             <ul class="com_scroll" id="naves_lista">
             </ul>
             
         
         </div>
-        
-        
-        
-        
         
         <!--
         <div class="quadrado">

@@ -31,6 +31,9 @@ function carregar_filmes(){
                 response.results.forEach(function(el){
                     option = document.createElement("option");
                     option.innerHTML = el.title;
+                    option.setAttribute('release_date',JSON.stringify(el.release_date));
+                    option.setAttribute('director',JSON.stringify(el.director));
+                    option.setAttribute('opening_crawl',JSON.stringify(el.opening_crawl));
                     option.setAttribute('characters',JSON.stringify(el.characters));
                     option.setAttribute('planets',JSON.stringify(el.planets));
                     option.setAttribute('species',JSON.stringify(el.species));
@@ -49,19 +52,33 @@ function carregar_filmes(){
 }
 //***********************************************************************************************
 function mostrar_dados(ev){
+    mostrar_atributos(ev);
     mostrar_personagens(ev);
     mostrar_planetas(ev);
     mostrar_especies(ev);
     mostrar_naves(ev);
 }
 //***********************************************************************************************
+function mostrar_atributos(ev){
+    selected = ev.target;
+    
+    var ano_campo = document.querySelector("#ano_campo");
+    var diretor_campo = document.querySelector("#diretor_campo");
+    var sinopse_campo = document.querySelector("#sinopse_campo");
+    
+    ano_campo.innerHTML = JSON.parse(selected.selectedOptions[0].getAttribute('release_date'));
+    diretor_campo.innerHTML = JSON.parse(selected.selectedOptions[0].getAttribute('director'));
+    sinopse_campo.innerHTML = JSON.parse(selected.selectedOptions[0].getAttribute('opening_crawl'));
+
+}
+//***********************************************************************************************
 function mostrar_personagens(ev){
     //pega o filme selecionado
     selected = ev.target;
-    console.log(selected.selectedOptions);
+    //console.log(selected.selectedOptions);
     //transforma string em objetos
     personagens = JSON.parse(selected.selectedOptions[0].getAttribute('characters'));
-    console.log(personagens);
+    //console.log(personagens);
     var lista = document.querySelector("#personagens_lista");
     lista.innerHTML = "";
     
@@ -97,7 +114,7 @@ function mostrar_planetas(ev){
     
     //transforma string em objetos
     planetas = JSON.parse(selected.selectedOptions[0].getAttribute('planets'));
-    console.log(planetas);
+    
     var lista = document.querySelector("#planetas_lista");
     lista.innerHTML = "";
     
@@ -163,7 +180,7 @@ function mostrar_especies(ev){
 function mostrar_naves(ev){
     //pega o filme selecionado
     selected = ev.target;
-    console.log(selected.selectedOptions);
+
     //transforma string em objetos
     naves = JSON.parse(selected.selectedOptions[0].getAttribute('starships'));
     
