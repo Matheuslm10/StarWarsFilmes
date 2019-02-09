@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Star Wars Films</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script src="scripts/ajax.js"></script>
+	</head>
+	<body>
+
+		<header>
+            <h1>Star Wars</h1>
+            <h4>Tudo sobre os filmes</h4>
+        </header>
+        <div>
+            <p>Selecione um filme:</p>
+            <select id="filmes" onchange="mostrar_personagens">
+                <option characters="oi">Luke Skywalker</option>
+                <option>C-3PO</option>
+                <option>R2-D2</option>      
+            </select>
+            
+            <ul id="personagens_lista">
+                <li>filme1</li>
+                <li>filme2</li>
+                <li>filme3</li>
+            </ul>
+        
+        </div>
+
+	</body>
+</html>
