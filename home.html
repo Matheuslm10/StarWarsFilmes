@@ -3,9 +3,8 @@
 	<head>
 		<title>Star Wars Films</title>
 		<meta charset="utf-8" />
-        <script src="scripts/ajax.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        
+        <script src="https://use.fontawesome.com/b04bea7c88.js"></script>
         <style>
             .com_scroll{
                 overflow: scroll;
@@ -37,6 +36,7 @@
                 width: 300px;
                 margin-bottom: 20px;
                 margin-top: 50px;
+                height: auto;
             }
             
             table td:first-child{
@@ -52,8 +52,24 @@
 		<header>
             <h1>Star Wars</h1>
             <h2>Tudo sobre os filmes</h2>
-        </header>        
+        </header>   
         
+        <button type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>  
+        
+        <div class="quadrado">
+            <h3 id='titulo'></h3>
+            <p id="ano_campo"></p>
+            <p id="diretor_campo"></p>
+            <p id="sinopse_campo"></p>
+        </div>
+        
+          
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script src="scripts/axios.js" charset="utf-8"></script>
+
+        
+        <!--
         <div>
             <h3>Selecione um filme:</h3>
             <select id="filmes" onchange="mostrar_dados"> 
@@ -93,23 +109,10 @@
             <p><b>Naves:</b></p>
             <ul class="com_scroll" id="naves_lista">
             </ul>
-            
-        
         </div>
+
+    -->
         
-        <!--
-        <div class="quadrado">
-            <h1 id='titulo'></h1>
-        </div>
-        
-        <button type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>
-        -->
-        
-        
-        <!--
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-        <script src="axios.js" charset="utf-8"></script>
-        -->
             
 
 	</body>
