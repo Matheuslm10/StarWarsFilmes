@@ -822,8 +822,8 @@ b{
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			border-color: #ff7496;
-			color: #ff7496 !important;
+			border-color: #d177ff;
+			color: #d177ff !important;
 		}
 
 		input[type="submit"].icon,
@@ -964,6 +964,7 @@ b{
 		color: rgba(255, 255, 255, 0.75);
 		cursor: default;
 		text-align: center;
+        font-size: 13px;
 	}
 
 		#footer .copyright {
