@@ -5,143 +5,80 @@
 		<meta charset="utf-8" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script src="https://use.fontawesome.com/b04bea7c88.js"></script>
-        <style>
-            .com_scroll{
-                overflow: scroll;
-                max-height: 70px;
-                min-height: 70px;
-                padding: 5px;
-                width: 300px;
-                background-color: azure;
-            }
-            
-            ::-webkit-scrollbar {
-                width: 7px;
-                height: 0px;
-            }
-            ::-webkit-scrollbar-track {
-                border: 1px solid #ddd;
-                border-radius: 10px;
-            }
-            ::-webkit-scrollbar-thumb {
-                background: #ddd;  
-                border-radius: 10px;
-            }
-            ::-webkit-scrollbar-thumb:hover {
-                background: #f7dea5;  
-            }
-            
-            .quadrado{
-                border-style: solid;
-                width: 300px;
-                margin-bottom: 20px;
-                margin-top: 50px;
-                height: auto;
-            }
-            
-            table td:first-child{
-                width: 140px;
-            }
-            
-            #adireita{
-                float: right;
-            }
-            
-            #aesquerda{
-                float: left;
-            }
-        
-        </style>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
         
 	</head>
     
-	<body>
+	<body><div id="corpo_app">
 
 		<header>
             <h1>Star Wars</h1>
             <h2>Tudo sobre os filmes</h2>
         </header>   
         
-        <div id="aesquerda">
-            <button type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>  
+        <div class="quadrado">
+            <!--
+            <div class="horizontal">
+                <button onclick="">Anterior</button>
+                <button onclick="">Próximo</button>            
+            </div>
+            -->
+            <div class="horizontal">
+                <button class="extras" type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>            
+            </div>
+              
 
             <div class="quadrado">
                 <h3 id='titulo'></h3>
                 <p id="ano_campo"></p>
                 <p id="diretor_campo"></p>
+            </div>
+            <div class="quadrado">
                 <p id="sinopse_campo"></p>
             </div>
         </div>
+
+        <script>
+        function abreFechaDiv(id) {
+          var x = document.getElementById(id);
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
         
-        <div id="adireita">
-            <p><b>Personagens:</b></p>
-            <ul class="com_scroll" id="personagens_lista">
-            </ul>
+        <div class="quadrado" id="extras">
+            
+            <button class="extras" onclick="abreFechaDiv('div_person')">Personagens</button>
+            <div class="caixa_scroll" id="div_person">
+                <ol class="com_scroll" id="personagens_lista">
+                </ol>
+            </div>            
 
-            <p><b>Planetas:</b></p>
-            <ul class="com_scroll" id="planetas_lista">
-            </ul>
+            <button class="extras" onclick="abreFechaDiv('div_planet')">Planetas</button>
+            <div class="caixa_scroll" id="div_planet">
+                <ul class="com_scroll" id="planetas_lista">
+                </ul>
+            </div>
 
-            <p><b>Espécies:</b></p>
-            <ul class="com_scroll" id="especies_lista">
-            </ul>
+            <button class="extras" onclick="abreFechaDiv('div_especi')">Espécies</button>
+            <div class="caixa_scroll" id="div_especi">
+                <ul class="com_scroll" id="especies_lista">
+                </ul>
+            </div>
 
-            <p><b>Naves:</b></p>
-            <ul class="com_scroll" id="naves_lista">
-            </ul>
+            <button class="extras" onclick="abreFechaDiv('div_naves')">Naves</button>
+            <div class="caixa_scroll" id="div_naves">
+                <ul class="com_scroll" id="naves_lista">
+                </ul>
+            </div>
         </div>
         
-          
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
         <script src="scripts/axios.js" charset="utf-8"></script>
 
-        
-        <!--
-        <div>
-            <h3>Selecione um filme:</h3>
-            <select id="filmes" onchange="mostrar_dados"> 
-            </select>
-
-            <table>
-                <tr>
-                    <td><b>Ano de lançamento:</b></td>
-                    <td id="ano_campo"></td> 
-                </tr>
-                <tr>
-                    <td><b>Diretor:</b></td>
-                    <td id="diretor_campo"></td>
-                </tr>
-                <tr>
-                    
-                </tr>
-            </table>
-            
-            <div style="width:300px">
-                <p><b>Sinopse:</b></p>
-                <p id="sinopse_campo"></p>
-            </div>
-            
-            <p><b>Personagens:</b></p>
-            <ul class="com_scroll" id="personagens_lista">
-            </ul>
-            
-            <p><b>Planetas:</b></p>
-            <ul class="com_scroll" id="planetas_lista">
-            </ul>
-            
-            <p><b>Espécies:</b></p>
-            <ul class="com_scroll" id="especies_lista">
-            </ul>
-            
-            <p><b>Naves:</b></p>
-            <ul class="com_scroll" id="naves_lista">
-            </ul>
-        </div>
-
-    -->
-        
-            
-
-	</body>
+	</div></body>
 </html>

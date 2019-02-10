@@ -43,8 +43,7 @@ function pegar_personagem(data){
     }
     for (i = 0; i < data.starships.length; i++) {
         acessarObjeto(data.starships[i], "nave");
-    }
-    
+    }    
 }
 
 function acessarObjeto(apiURL, tipo){
@@ -76,8 +75,7 @@ function preencherLista(data, tipo){
             
           default:
             console.log("TIPO NAO CONHECIDO!")
-    }
-    
+    }    
 }
 
 function iconeCarregando(data){
