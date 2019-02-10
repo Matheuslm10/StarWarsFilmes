@@ -17,44 +17,42 @@
         </header>   
         
         <div class="quadrado">
-            <!--
+            
             <div class="horizontal">
-                <button onclick="">Anterior</button>
-                <button onclick="">Próximo</button>            
-            </div>
-            -->
-            <div class="horizontal">
-                <button class="extras" type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>            
-            </div>
-              
+                <button class="botao_controle" id="prox">Voltar</button>
+                <button class="botao_controle" id="ant">Ver outro filme</button>            
+            </div>              
 
-            <div class="quadrado">
+            <div class="quadrado" id="div_titulo">
                 <h3 id='titulo'></h3>
+            </div>
+            <div class="quadrado" id="principal">
                 <p id="ano_campo"></p>
                 <p id="diretor_campo"></p>
             </div>
             <div class="quadrado">
                 <p id="sinopse_campo"></p>
+                
             </div>
         </div>
 
         <script>
-        function abreFechaDiv(id) {
-          var x = document.getElementById(id);
-          if (x.style.display === "none") {
-            x.style.display = "block";
-          } else {
-            x.style.display = "none";
-          }
-        }
+            function abreFechaDiv(id) {
+              var x = document.getElementById(id);
+              if (x.style.display === "none") {
+                x.style.display = "block";
+              } else {
+                x.style.display = "none";
+              }
+            }
         </script>
         
         <div class="quadrado" id="extras">
             
             <button class="extras" onclick="abreFechaDiv('div_person')">Personagens</button>
             <div class="caixa_scroll" id="div_person">
-                <ol class="com_scroll" id="personagens_lista">
-                </ol>
+                <ul class="com_scroll" id="personagens_lista">
+                </ul>
             </div>            
 
             <button class="extras" onclick="abreFechaDiv('div_planet')">Planetas</button>

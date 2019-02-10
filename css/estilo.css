@@ -41,6 +41,7 @@ body{
     text-align: center;
     margin: 0 auto;
     border-radius: 10px;
+    padding: 0.5% 0;
 }
 .quadrado{
     border-style: solid;
@@ -52,11 +53,24 @@ body{
     
 }
 
+#principal{
+    text-align: left;
+    padding-left: 5%;
+}
+
 .extras{
     height:40px;
     width: 50%;
     margin: 2% 0;
     border-radius: 50px;
+}
+
+.botao_controle{
+    height:40px;
+    width: 30%;
+    margin: 2% 2%;
+    border-radius: 50px;
+    
 }
 
 .horizontal{

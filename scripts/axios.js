@@ -1,23 +1,70 @@
-let botao   = document.querySelector("#botao");
-let titulo  = document.querySelector("#titulo");
-let ano     = document.querySelector("#ano_campo");
-let diretor = document.querySelector("#diretor_campo");
-let sinopse = document.querySelector("#sinopse_campo");
+let botao    = document.querySelector("#botao");
+let btn_prox = document.querySelector("#prox");
+let btn_ant  = document.querySelector("#ant");
+let titulo   = document.querySelector("#titulo");
+let ano      = document.querySelector("#ano_campo");
+let diretor  = document.querySelector("#diretor_campo");
+let sinopse  = document.querySelector("#sinopse_campo");
 
 let personagens = document.querySelector("#personagens_lista");
 let planetas    = document.querySelector("#planetas_lista");
 let especies    = document.querySelector("#especies_lista");
 let naves       = document.querySelector("#naves_lista");
 
-function acessarFilmes(){
+let apiUrl;
+let numero;
+carregarPrimeiroFilme();
+
+function carregarPrimeiroFilme(){
     iconeCarregando();
-    let randomNumber = Math.floor((Math.random() * 7) + 1);
-    let apiUrl = 'https://swapi.co/api/films/' + randomNumber + "/";
+    numero = 1;
+    apiUrl = 'https://swapi.co/api/films/' + numero + "/";
     
     axios.get(apiUrl).then(function(response){
         atualizarTitulo(response.data);
         pegar_personagem(response.data);
     });    
+}
+
+function acessarXFilme(x){
+    iconeCarregando();
+    if(x==="prox"){
+        if(numero===7){
+            numero = 1;
+        }else{
+            numero++;
+        }
+    }else if(x==="ant"){
+        if(numero===1){
+            numero = 7;
+        }else{
+            numero--;
+        }
+    }
+    
+    let linkApi = 'https://swapi.co/api/films/' + numero + "/";
+    
+    axios.get(linkApi).then(function(response){
+        atualizarTitulo(response.data);
+        pegar_personagem(response.data);
+    });    
+}
+
+function acessarAntFilme(){
+    iconeCarregando();
+    if(numero===1){
+        numero = 7;
+    }else{
+        numero--;
+    }
+    
+    let linkApi = 'https://swapi.co/api/films/' + numero + "/";
+    
+    axios.get(linkApi).then(function(response){
+        atualizarTitulo(response.data);
+        pegar_personagem(response.data);
+    });   
+    
 }
 
 function atualizarTitulo(data){
@@ -89,4 +136,5 @@ function iconeCarregando(data){
     naves.innerHTML       = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
 }
 
-botao.addEventListener('click', acessarFilmes);
+btn_prox.addEventListener('click', function(){acessarXFilme("prox")});
+btn_ant.addEventListener('click', function(){acessarXFilme("ant")});
