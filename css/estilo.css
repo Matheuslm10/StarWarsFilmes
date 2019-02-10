@@ -1,0 +1,146 @@
+.com_scroll{
+    overflow: scroll;
+    height: 480px;
+    width: 100%;
+    margin: 2% auto;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: lightgray
+}
+
+.scroll_extras{
+    overflow: scroll;
+    height: 100px;
+    width: 70%;
+    margin: 1% auto;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: lightgray;
+    margin-bottom: 15px;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 0px;
+}
+::-webkit-scrollbar-track {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #ddd;  
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f7dea5;  
+}
+
+.quadrado{
+    width: auto;
+    height: auto;
+}
+
+.divisoriaA{
+    margin: 5px;
+}
+
+.divisoriaB{
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: lightgray;
+    margin: 5px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.divisoriaC{
+    margin: 5px;
+    text-align:center;
+    padding-bottom: 5px;
+}
+
+.botao_curiosidades{
+    height:40px;
+    width: 50%;
+    margin: 2% 2% 0;
+    border-radius: 50px;
+    margin-bottom:5px;
+    -webkit-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+}
+
+
+#div_titulo{
+    padding-top: 10px;
+    text-align: center;
+}
+
+#div_detalhes{
+    padding-top: 10px;
+    text-align: center;
+    display: none;
+    border-radius: 30px;
+}
+
+#extras{
+    border-radius: 25px;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top:25px;
+    -webkit-box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.75);
+}
+
+.tamanho_img{
+    height: 450px;
+    width: 300px;
+    border-radius: 4px;
+}
+
+
+.poster{
+    height: 450px;
+    width: 300px;
+}
+
+#div_sinopse{
+    height: 70px;
+    overflow: hidden;
+    border: none;
+}
+
+.botao_controle{
+    height:35px;
+    width: 40%;
+    margin: 2% 2% 3%;
+    border-radius: 50px;
+    -webkit-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+}
+
+.lermais{
+    background-color: transparent;
+    border: none;
+    margin-bottom: 2%;
+}
+
+.horizontal{
+    padding: 1% 0;
+    margin: 0 auto;
+}
+
+table td:first-child{
+    width: 140px;
+}
