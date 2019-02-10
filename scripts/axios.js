@@ -5,7 +5,8 @@ let titulo   = document.querySelector("#titulo");
 let ano      = document.querySelector("#ano_campo");
 let diretor  = document.querySelector("#diretor_campo");
 let sinopse  = document.querySelector("#sinopse_campo");
-let sinopse2  = document.querySelector("#sinopse_2");
+let sinopse2 = document.querySelector("#sinopse_2");
+let poster   =document.querySelector("#img_poster");
 
 let personagens = document.querySelector("#personagens_lista");
 let planetas    = document.querySelector("#planetas_lista");
@@ -72,9 +73,9 @@ function atualizarTitulo(data){
     titulo.innerText  = data.title;
     ano.innerHTML     = "<b>Data de lançamento</b>: " + data.release_date ;
     diretor.innerHTML = "<b>Diretor:</b> " + data.director;
-    
+    poster.innerHTML  = "<center><img class='tamanho_img' src='imagens/" + data.episode_id + ".jpg'></center>" ;
     esconderSinopse();
-    sinopse.innerHTML = "<b>Sinopse:</b>"; 
+    sinopse.innerHTML = "<h3>Sinopse:</h3>"; 
     sinopse2.innerText = data.opening_crawl; 
 }
 
@@ -131,6 +132,7 @@ function preencherLista(data, tipo){
 
 function iconeCarregando(data){
     titulo.innerHTML  = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
+    poster.innerHTML  = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
     ano.innerText     = "";
     diretor.innerText = "";
     sinopse.innerText = "";

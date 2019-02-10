@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Identity by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+						<header>
+							<h1>Star Wars</h1>
+							<p>Tudo sobre os filmes</p>
+						</header>
+                        
+                        <div class="quadrado">
+                            <div class="divisoriaA">
+                                <button class="botao_controle" id="prox">Voltar</button>
+                                <button class="botao_controle" id="ant">Ver outro filme</button>            
+                            </div> 
+                        </div>
+						
+                        
+                        <div class="com_scroll">
+                            <div class="quadrado">            
+                                             
+
+                                <div class="divisoriaA" id="div_titulo">
+                                    <h3 id='titulo'>titulo</h3>
+                                </div>
+                                
+                                <div class="divisoriaC" id="div_titulo">
+                                    <center><div class="poster" id="img_poster"></div></center>
+                                </div>
+                                
+                                <div class="divisoriaB" id="ano_diretor">
+                                    <p id="ano_campo">Ano:</p>
+                                    <p id="diretor_campo">Diretor:</p>
+                                </div>
+                                
+                                <div  class="divisoriaB" id="div_sinopse_grupo">
+                                    <center>
+                                    <h3 id="sinopse_campo"></h3>
+                                    <div id="div_sinopse">
+                                        <p id="sinopse_2"></p>
+                                    </div>                
+                                    <button id="lermais" class="lermais" onclick="lerMais('div_sinopse')">Ler mais...</button>
+                                    </center>
+                                </div>
+                                
+                                
+                                <div class="divisoriaC">
+                                    <button class="botao_curiosidades" onclick="abreFechaDiv('div_detalhes')" id="curiosidades" value="+"><text id="texto_botao"></text></button>
+                                    
+                                </div>
+                                <div class="divisoriaC" id="div_detalhes">
+            
+                                    <div class="divisoriaA" id="extras"><p>Personagens:</p>
+                                    <div class="caixa_scroll" id="div_person">
+                                        <ul class="scroll_extras" id="personagens_lista">
+                                        </ul>
+                                    </div></div>            
+
+                                    <div class="divisoriaA" id="extras"><p>Planetas:</p>
+                                    <div class="caixa_scroll" id="div_planet">
+                                        <ul class="scroll_extras" id="planetas_lista">
+                                        </ul>
+                                    </div></div>
+
+                                    <div class="divisoriaA" id="extras"><p>Espécies:</p>
+                                    <div class="caixa_scroll" id="div_especi">
+                                        <ul class="scroll_extras" id="especies_lista">
+                                        </ul>
+                                    </div></div>
+
+                                    <div class="divisoriaA" id="extras"><p>Espaçonaves:</p>
+                                    <div class="caixa_scroll" id="div_naves">
+                                        <ul class="scroll_extras" id="naves_lista">
+                                        </ul>
+                                    </div></div>
+                                    
+                                </div>
+                                
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+                                <script src="scripts/axios.js" charset="utf-8"></script>
+                                <script src="scripts/dynamics.js" charset="utf-8"></script>
+                                
+                            </div>
+                        
+                        </div>
+						
+						
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="copyright">
+							<li>&copy; Jane Doe</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+			</script>
+
+	</body>
+</html>

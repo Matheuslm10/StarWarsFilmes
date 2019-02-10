@@ -1,19 +1,31 @@
 .com_scroll{
     overflow: scroll;
-    max-height: 200px;
-    min-height: 70px;
-    padding: 5px;
-    width: 50%;
+    height: 480px;
+    width: 100%;
     margin: 2% auto;
-    background-color:darkgray;
     text-align: left;
-    padding-left: 10%;
-    border-radius: 15px;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: lightgray
 }
 
-.caixa_scroll{
-    display:none;
+.scroll_extras{
+    overflow: scroll;
+    height: 100px;
+    width: 70%;
+    margin: 1% auto;
+    text-align: left;
+    border-radius: 4px;
+    border: 1px solid;
+    border-color: lightgray;
+    margin-bottom: 15px;
+    
 }
+
+ul{
+    list-style-type: none;
+}
+
 
 ::-webkit-scrollbar {
     width: 7px;
@@ -30,39 +42,76 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #f7dea5;  
 }
-body{
-    font-family: sans-serif;
-    background-color: black;
-}
 
-.corpo_app{
-    background-color: lightgray;
-    width: 35%;
-    text-align: center;
-    margin: 0 auto;
-    border-radius: 10px;
-    padding: 0.5% 0;
-}
 .quadrado{
-    border-style: solid;
-    border-color: #9b9b9b;
     width: auto;
-    margin: 2% 2%;
     height: auto;
+}
+
+.divisoriaA{
+    margin: 5px;
+}
+
+.divisoriaB{
+    border: 1px solid;
     border-radius: 10px;
-    
+    border-color: lightgray;
+    margin: 5px;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 
-#principal{
-    text-align: left;
-    padding-left: 5%;
+.divisoriaC{
+    margin: 5px;
+    text-align:center;
+    padding-bottom: 5px;
 }
 
-.extras{
+.botao_curiosidades{
     height:40px;
     width: 50%;
-    margin: 2% 0;
+    margin: 2% 2% 0;
     border-radius: 50px;
+    margin-bottom: -30px;
+    -webkit-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+}
+
+
+#div_titulo{
+    padding-top: 10px;
+    text-align: center;
+}
+
+#div_detalhes{
+    padding-top: 10px;
+    text-align: center;
+    display: none;
+    border-radius: 30px;
+}
+
+#extras{
+    border-radius: 25px;
+    margin: 0 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-top:25px;
+    -webkit-box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -6px rgba(0,0,0,0.75);
+}
+
+.tamanho_img{
+    height: 450px;
+    width: 300px;
+    border-radius: 4px;
+}
+
+
+.poster{
+    height: 450px;
+    width: 300px;
 }
 
 #div_sinopse{
@@ -72,11 +121,13 @@ body{
 }
 
 .botao_controle{
-    height:40px;
-    width: 30%;
-    margin: 2% 2% 0;
+    height:35px;
+    width: 40%;
+    margin: 2% 2% 3%;
     border-radius: 50px;
-    
+    -webkit-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 21px -10px rgba(0,0,0,0.75);
 }
 
 .lermais{

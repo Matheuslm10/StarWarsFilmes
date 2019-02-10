@@ -13,7 +13,15 @@ https://semver.org/lang/pt-BR/#spec-item-5
 	Commit:"todos os requisitos contemplados"
 
 [1ª release]
-1.0.0 organiza melhor os dados na tela (atende a todos os requisitos).
+1.0.0 Contempla todos os requisitos do escopo (organiza melhor os dados na tela).
 	Commit:"organizacao dos dados"
+
+...
+[2ª release]
+1.2.0 organiza melhor os dados na tela (atende a todos os requisitos).
+	Commit:"organizacao dos dados"
+
+
+
 
 
