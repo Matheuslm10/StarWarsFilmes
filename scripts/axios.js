@@ -5,6 +5,7 @@ let titulo   = document.querySelector("#titulo");
 let ano      = document.querySelector("#ano_campo");
 let diretor  = document.querySelector("#diretor_campo");
 let sinopse  = document.querySelector("#sinopse_campo");
+let sinopse2  = document.querySelector("#sinopse_2");
 
 let personagens = document.querySelector("#personagens_lista");
 let planetas    = document.querySelector("#planetas_lista");
@@ -17,13 +18,17 @@ carregarPrimeiroFilme();
 
 function carregarPrimeiroFilme(){
     iconeCarregando();
-    numero = 1;
+    numero = Math.floor((Math.random() * 7) + 1);
     apiUrl = 'https://swapi.co/api/films/' + numero + "/";
     
+    requisicaoNovoFilme(apiUrl);
+}
+
+function requisicaoNovoFilme(apiUrl){
     axios.get(apiUrl).then(function(response){
         atualizarTitulo(response.data);
         pegar_personagem(response.data);
-    });    
+    }); 
 }
 
 function acessarXFilme(x){
@@ -43,11 +48,7 @@ function acessarXFilme(x){
     }
     
     let linkApi = 'https://swapi.co/api/films/' + numero + "/";
-    
-    axios.get(linkApi).then(function(response){
-        atualizarTitulo(response.data);
-        pegar_personagem(response.data);
-    });    
+    requisicaoNovoFilme(linkApi);
 }
 
 function acessarAntFilme(){
@@ -69,9 +70,12 @@ function acessarAntFilme(){
 
 function atualizarTitulo(data){
     titulo.innerText  = data.title;
-    ano.innerText     = "Ano de lançamento: " + data.release_date;
-    diretor.innerText = "Diretor: " + data.director;
-    sinopse.innerText = "Sinopse: " + data.opening_crawl;    
+    ano.innerHTML     = "<b>Data de lançamento</b>: " + data.release_date ;
+    diretor.innerHTML = "<b>Diretor:</b> " + data.director;
+    
+    esconderSinopse();
+    sinopse.innerHTML = "<b>Sinopse:</b>"; 
+    sinopse2.innerText = data.opening_crawl; 
 }
 
 function pegar_personagem(data){
@@ -130,6 +134,7 @@ function iconeCarregando(data){
     ano.innerText     = "";
     diretor.innerText = "";
     sinopse.innerText = "";
+    sinopse2.innerText = "";
     personagens.innerHTML = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
     planetas.innerHTML    = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
     especies.innerHTML    = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
@@ -138,3 +143,12 @@ function iconeCarregando(data){
 
 btn_prox.addEventListener('click', function(){acessarXFilme("prox")});
 btn_ant.addEventListener('click', function(){acessarXFilme("ant")});
+
+function esconderSinopse() {
+    let x = document.getElementById("div_sinopse").style;
+    var botao = document.getElementById("lermais").style;
+    if (x.height == "auto" || x.height == '') {
+        x.height = "70px";
+        botao.visibility = "visible";
+    } 
+}

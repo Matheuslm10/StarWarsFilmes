@@ -9,7 +9,7 @@
         
 	</head>
     
-	<body><div id="corpo_app">
+	<body><div class="corpo_app">
 
 		<header>
             <h1>Star Wars</h1>
@@ -32,21 +32,36 @@
             </div>
             <div class="quadrado">
                 <p id="sinopse_campo"></p>
+                <div class="quadrado" id="div_sinopse">
+                    <p id="sinopse_2"></p>
+                </div>                
+                <button id="lermais" class="lermais" onclick="lerMais('div_sinopse')">Ler mais...</button>
                 
             </div>
         </div>
 
         <script>
             function abreFechaDiv(id) {
-              var x = document.getElementById(id);
-              if (x.style.display === "none") {
-                x.style.display = "block";
+              var x = document.getElementById(id).style;
+              if (x.display == "none" || x.display == '') {
+                x.display = "block";
               } else {
-                x.style.display = "none";
+                x.display = "none";
               }
             }
         </script>
         
+        <script>
+            function lerMais(id) {
+              var x = document.getElementById(id).style;
+              var botao = document.getElementById("lermais").style;
+              if (x.height == "70px" || x.height == '') {
+                x.height = "auto";
+                botao.visibility = "hidden";
+              } 
+            }
+        </script>
+
         <div class="quadrado" id="extras">
             
             <button class="extras" onclick="abreFechaDiv('div_person')">Personagens</button>

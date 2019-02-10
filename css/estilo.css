@@ -1,7 +1,7 @@
 .com_scroll{
     overflow: scroll;
-    max-height: 70px;
-    min-height: 150px;
+    max-height: 200px;
+    min-height: 70px;
     padding: 5px;
     width: 50%;
     margin: 2% auto;
@@ -35,9 +35,9 @@ body{
     background-color: black;
 }
 
-#corpo_app{
+.corpo_app{
     background-color: lightgray;
-    width: 30%;
+    width: 35%;
     text-align: center;
     margin: 0 auto;
     border-radius: 10px;
@@ -45,9 +45,9 @@ body{
 }
 .quadrado{
     border-style: solid;
-    border-color: black;
+    border-color: #9b9b9b;
     width: auto;
-    margin: 5% 2%;
+    margin: 2% 2%;
     height: auto;
     border-radius: 10px;
     
@@ -65,12 +65,24 @@ body{
     border-radius: 50px;
 }
 
+#div_sinopse{
+    height: 70px;
+    overflow: hidden;
+    border: none;
+}
+
 .botao_controle{
     height:40px;
     width: 30%;
-    margin: 2% 2%;
+    margin: 2% 2% 0;
     border-radius: 50px;
     
+}
+
+.lermais{
+    background-color: transparent;
+    border: none;
+    margin-bottom: 2%;
 }
 
 .horizontal{
