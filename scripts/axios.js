@@ -4,6 +4,11 @@ let ano     = document.querySelector("#ano_campo");
 let diretor = document.querySelector("#diretor_campo");
 let sinopse = document.querySelector("#sinopse_campo");
 
+let personagens = document.querySelector("#personagens_lista");
+let planetas    = document.querySelector("#planetas_lista");
+let especies    = document.querySelector("#especies_lista");
+let naves       = document.querySelector("#naves_lista");
+
 function acessarFilmes(){
     iconeCarregando();
     let randomNumber = Math.floor((Math.random() * 7) + 1);
@@ -11,15 +16,68 @@ function acessarFilmes(){
     
     axios.get(apiUrl).then(function(response){
         atualizarTitulo(response.data);
-    });
-    
+        pegar_personagem(response.data);
+    });    
 }
 
 function atualizarTitulo(data){
     titulo.innerText  = data.title;
     ano.innerText     = "Ano de lançamento: " + data.release_date;
     diretor.innerText = "Diretor: " + data.director;
-    sinopse.innerText = "Sinopse: " + data.opening_crawl;
+    sinopse.innerText = "Sinopse: " + data.opening_crawl;    
+}
+
+function pegar_personagem(data){
+    personagens.innerHTML = "";
+    planetas.innerHTML = "";
+    especies.innerHTML = "";
+    naves.innerHTML = "";
+    for (i = 0; i < data.characters.length; i++) {
+        acessarObjeto(data.characters[i], "personagem");
+    }  
+    for (i = 0; i < data.planets.length; i++) {
+        acessarObjeto(data.planets[i], "planeta");
+    }
+    for (i = 0; i < data.species.length; i++) {
+        acessarObjeto(data.species[i], "especie");
+    }
+    for (i = 0; i < data.starships.length; i++) {
+        acessarObjeto(data.starships[i], "nave");
+    }
+    
+}
+
+function acessarObjeto(apiURL, tipo){
+    axios.get(apiURL).then(function(response){
+        preencherLista(response.data, tipo);      
+    });
+}
+
+function preencherLista(data, tipo){
+    li = document.createElement("li");
+    li.innerHTML = data.name;
+    
+    switch(tipo) {
+          case "personagem":
+            personagens.appendChild(li);
+            break;
+            
+          case "planeta":
+            planetas.appendChild(li);
+            break;
+            
+          case "especie":
+            especies.appendChild(li);
+            break;
+            
+          case "nave":
+            naves.appendChild(li);
+            break;
+            
+          default:
+            console.log("TIPO NAO CONHECIDO!")
+    }
+    
 }
 
 function iconeCarregando(data){
@@ -27,107 +85,10 @@ function iconeCarregando(data){
     ano.innerText     = "";
     diretor.innerText = "";
     sinopse.innerText = "";
+    personagens.innerHTML = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
+    planetas.innerHTML    = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
+    especies.innerHTML    = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
+    naves.innerHTML       = '<i class="fa fa-spinner fa-pulse fa-fw"></i><span class="sr-only">Loading...</span>';
 }
-
-
 
 botao.addEventListener('click', acessarFilmes);
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-var response
-var selected;
-
-//aqui verifica o estado do documento
-document.onreadystatechange = function(){
-	if (document.readyState == "complete") {
-		//pegar_personagens();
-        pegar_filmes();
-        
-        document.querySelector('#filmes').onchange=mostrar_personagens;
-	}
-}
-
-function pegar_filmes(){
-    var httpRequest = new XMLHttpRequest();
-    
-    //aqui verifica o estado do request
-    httpRequest.onreadystatechange = function(){
-        if (httpRequest.readyState === 4){
-            if (httpRequest.status === 200){
-                
-                //transforma string em objetos
-                response = JSON.parse(httpRequest.responseText);
-                
-                //seleciona os filmes
-                var lista = document.querySelector("#filmes");
-                
-                //limpa os nomes do html
-                lista.innerHTML = "";
-                
-                //pega o titulo do filme de cada elemento
-                response.results.forEach(function(el){
-                    option = document.createElement("option");
-                    option.innerHTML = el.title;
-                    option.setAttribute('characters',JSON.stringify(el.characters));
-                    
-                    lista.appendChild(option);
-                })
-            
-            }
-            
-            
-        }
-    }
-    
-    httpRequest.open('GET', 'https://swapi.co/api/films/');
-	httpRequest.send();
-}
-
-function mostrar_personagens(ev){
-    //pega o filme selecionado
-    selected = ev.target;
-    
-    //transforma string em objetos
-    personagens = JSON.parse(selected.selectedOptions[0].getAttribute('characters'));
-    
-    var lista = document.querySelector("#personagens_lista");
-    lista.innerHTML = "";
-    
-    personagens.forEach(function(url){
-        var httpRequest = new XMLHttpRequest();
-        
-        httpRequest.onreadystatechange = function(){        
-            if (httpRequest.readyState === 4){
-                if (httpRequest.status === 200){
-                    personagem = JSON.parse(httpRequest.responseText);
-
-                    li = document.createElement("li");
-                    li.innerHTML = personagem.name;
-                    lista.appendChild(li);
-                }
-
-            }  
-        }
-    
-        httpRequest.open('GET', url);
-        httpRequest.send();
-    
-    
-    }) 
-    
-}
-
-*/

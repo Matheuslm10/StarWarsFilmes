@@ -42,6 +42,14 @@
             table td:first-child{
                 width: 140px;
             }
+            
+            #adireita{
+                float: right;
+            }
+            
+            #aesquerda{
+                float: left;
+            }
         
         </style>
         
@@ -54,13 +62,33 @@
             <h2>Tudo sobre os filmes</h2>
         </header>   
         
-        <button type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>  
+        <div id="aesquerda">
+            <button type="button" id="botao" name="botao">Escolher filme aleatoriamente</button>  
+
+            <div class="quadrado">
+                <h3 id='titulo'></h3>
+                <p id="ano_campo"></p>
+                <p id="diretor_campo"></p>
+                <p id="sinopse_campo"></p>
+            </div>
+        </div>
         
-        <div class="quadrado">
-            <h3 id='titulo'></h3>
-            <p id="ano_campo"></p>
-            <p id="diretor_campo"></p>
-            <p id="sinopse_campo"></p>
+        <div id="adireita">
+            <p><b>Personagens:</b></p>
+            <ul class="com_scroll" id="personagens_lista">
+            </ul>
+
+            <p><b>Planetas:</b></p>
+            <ul class="com_scroll" id="planetas_lista">
+            </ul>
+
+            <p><b>Espécies:</b></p>
+            <ul class="com_scroll" id="especies_lista">
+            </ul>
+
+            <p><b>Naves:</b></p>
+            <ul class="com_scroll" id="naves_lista">
+            </ul>
         </div>
         
           
