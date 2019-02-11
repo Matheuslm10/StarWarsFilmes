@@ -115,12 +115,12 @@ header{
 
 	body {
 		height: 100%;
-		background-color: #ffffff;
-		background-image: url("images/overlay.png"), url("../../imagens/bg.jpg");
-		background-repeat: repeat,			no-repeat,			no-repeat;
-		background-size: 100px 100px, cover,				cover;
-		background-position: top left,		center center,		bottom center;
-		background-attachment: fixed,			fixed,				fixed;
+		background-color: black;
+		background-image: url("/imagens/bg.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position:bottom center;
+		background-attachment: fixed;
 	}
 
 		body:after {
