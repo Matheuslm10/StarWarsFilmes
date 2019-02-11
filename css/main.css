@@ -116,7 +116,7 @@ header{
 	body {
 		height: 100%;
 		background-color: black;
-		background-image: url("/imagens/bg.jpg");
+		background-image: url("../imagens/bg.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position:bottom center;
