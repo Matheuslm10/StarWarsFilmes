@@ -1,7 +1,6 @@
 let btn_curiosidades = document.querySelector("#texto_botao");
 btn_curiosidades.innerText = "+ Ver curiosidades";
 
-
 function abreFechaDiv(id) {
   var x = document.getElementById(id).style;
   if (x.display == "none" || x.display == '') {
@@ -13,12 +12,13 @@ function abreFechaDiv(id) {
   }
 }
 
+//esconde a maior parte do texto da sinopse
 function lerMais(id) {
   var x = document.getElementById(id).style;
   var botao = document.getElementById("lermais").style;
   if (x.height == "70px" || x.height == '') {
     x.height = "auto";
     botao.visibility = "hidden";
-  } 
+  }
 }
 

@@ -1,25 +1,25 @@
+Para acessar a aplicação, clique no link abaixo:
+https://matheuslm10.github.io/StarWarsFilmes/
+
 Versionamento:
 
-Utiliza o formato de X.Y.Z. X é a versão Maior, Y é a versão Menor (inserção de novas funcionalidades), e Z é a versão de Correção (correções de bugs). 
-https://semver.org/lang/pt-BR/#spec-item-5
+1.0.0 - [1ª release]
+->Contempla todos os requisitos do escopo.
+Mostra os filmes e suas informações, como: ano de lançamento, diretor, sinopse, 
+personagens, planetas, espécies e naves.
 
-0.1.0 mostra os filmes e personagens de cada filme
-	Commit:"commit inicial"
+1.2.0 - [2ª release]
+->Usa a biblioteca Axios e melhora a usabilidade.
+É usado uma biblioteca que facilita a técninca AJAX. Organiza melhor os dados na tela, e melhora a usabilidade.
 
-0.2.0 mostra os filmes, e personagens, planetas, espécies e naves.
-	Commit:"lista de atributos funcionando"
+1.3.0 - [3ª release]
+->Melhoria do layout.
+Apresenta uma interface mais agradável, e melhora a usabilidade. Também houve refatoração de código.
 
-0.3.0 mostra os filmes, e ano de lançamento, diretor, sinopse, personagens, planetas, espécies e naves.
-	Commit:"todos os requisitos contemplados"
+1.3.1 - [4ª release]
+->Entrega Final.
+Houve refatoração de código e organização da estrura de pastas.
 
-[1ª release]
-1.0.0 Contempla todos os requisitos do escopo (organiza melhor os dados na tela).
-	Commit:"organizacao dos dados"
-
-...
-[2ª release]
-1.2.0 organiza melhor os dados na tela (atende a todos os requisitos).
-	Commit:"organizacao dos dados"
 
 
 
