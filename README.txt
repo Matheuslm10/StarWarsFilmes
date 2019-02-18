@@ -1,24 +1,24 @@
-Para acessar a aplicação, clique no link abaixo:
+Para acessar a aplicaÃ§Ã£o, clique no link abaixo:
 https://matheuslm10.github.io/StarWarsFilmes/
 
 Versionamento:
 
-1.0.0 - [1ª release]
+1.0.0 - [1Âª release]
 ->Contempla todos os requisitos do escopo.
-Mostra os filmes e suas informações, como: ano de lançamento, diretor, sinopse, 
-personagens, planetas, espécies e naves.
+Mostra os filmes e suas informaÃ§Ãµes, como: ano de lanÃ§amento, diretor, sinopse, 
+personagens, planetas, espÃ©cies e naves.
 
-1.2.0 - [2ª release]
+1.2.0 - [2Âª release]
 ->Usa a biblioteca Axios e melhora a usabilidade.
-É usado uma biblioteca que facilita a técninca AJAX. Organiza melhor os dados na tela, e melhora a usabilidade.
+Ã‰ usado uma biblioteca que facilita o uso da tÃ©cnica AJAX. Organiza melhor os dados na tela, e melhora a usabilidade.
 
-1.3.0 - [3ª release]
+1.3.0 - [3Âª release]
 ->Melhoria do layout.
-Apresenta uma interface mais agradável, e melhora a usabilidade. Também houve refatoração de código.
+Apresenta uma interface mais agradÃ¡vel, e melhora a usabilidade. TambÃ©m houve refatoraÃ§Ã£o de cÃ³digo.
 
-1.3.1 - [4ª release]
+1.3.1 - [4Âª release]
 ->Entrega Final.
-Houve refatoração de código e organização da estrura de pastas.
+Houve refatoraÃ§Ã£o de cÃ³digo e organizaÃ§Ã£o da estrura de pastas.
 
 
 
